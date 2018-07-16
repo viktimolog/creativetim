@@ -19,6 +19,7 @@ import UpgradeToPro from "views/UpgradeToPro/UpgradeToPro.jsx";
 import Signup from "views/Signup/Signup.jsx";
 import Signin from "views/Signin/Signin.jsx";
 import EmailVerification from "views/EmailVerification/EmailVerification.jsx";
+import Config from "views/Config/Config.jsx";
 
 const dashboardRoutes = [
     {
@@ -41,6 +42,13 @@ const dashboardRoutes = [
         navbarName: "Email verification",
         icon: Person,
         component: EmailVerification
+    },
+    {
+        path: "/config",
+        sidebarName: "Config",
+        navbarName: "Config",
+        icon: Person,
+        component: Config
     },
   {
     path: "/dashboard",
