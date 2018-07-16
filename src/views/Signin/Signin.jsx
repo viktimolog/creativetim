@@ -12,8 +12,7 @@ import CardHeader from "components/Card/CardHeader.jsx";
 import CardAvatar from "components/Card/CardAvatar.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import CardFooter from "components/Card/CardFooter.jsx";
-
-import avatar from "assets/img/faces/marc.jpg";
+import {Link} from 'react-router-dom'
 
 const styles = {
   cardCategoryWhite: {
@@ -36,72 +35,48 @@ const styles = {
 
 function Signup(props) {
   const { classes } = props;
-  return (
-    <div>
-      <Grid container>
-        <GridItem xs={12} sm={12} md={8}>
-          <Card>
-            <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>Register with Home Expense App</h4>
-              <p className={classes.cardCategoryWhite}>Please enter your email and password</p>
-            </CardHeader>
-            <CardBody>
-              <Grid container>
-
-                <GridItem xs={12} sm={12} md={6}>
-                  <CustomInput
-                    labelText="Email address"
-                    id="email-address"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
-                  />
+    return (
+        <div>
+            <Grid container>
+                <GridItem xs={12} sm={12} md={8}>
+                    <Card>
+                        <CardHeader color="primary">
+                            <h4 className={classes.cardTitleWhite}>Register with Home Expense App</h4>
+                            <p className={classes.cardCategoryWhite}>Please enter your email and password</p>
+                        </CardHeader>
+                        <CardBody>
+                            <Grid container>
+                                <GridItem xs={12} sm={12} md={6}>
+                                    <CustomInput
+                                        labelText="Email address"
+                                        id="email-address"
+                                        formControlProps={{
+                                            fullWidth: true
+                                        }}
+                                    />
+                                </GridItem>
+                            </Grid>
+                            <Grid container>
+                                <GridItem xs={12} sm={12} md={6}>
+                                    <CustomInput
+                                        labelText="Password"
+                                        id="password"
+                                        formControlProps={{
+                                            fullWidth: true
+                                        }}
+                                    />
+                                </GridItem>
+                            </Grid>
+                        </CardBody>
+                        <CardFooter>
+                            <Button color="primary">SIGN IN</Button>
+                        </CardFooter>
+                        <Link style={{marginLeft: '16px'}} to='/signup'>first time user? sign-up</Link>
+                    </Card>
                 </GridItem>
-              </Grid>
-              <Grid container>
-                <GridItem xs={12} sm={12} md={6}>
-                  <CustomInput
-                    labelText="Password"
-                    id="password"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
-                  />
-                </GridItem>
-              </Grid>
-              <Grid container>
-                <GridItem xs={12} sm={12} md={6}>
-                  <CustomInput
-                    labelText="Repeat password"
-                    id="repeatpassword"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
-                  />
-                </GridItem>
-
-              </Grid>
-            </CardBody>
-            <CardFooter>
-              <Button color="primary">SIGN UP</Button>
-
-
-            </CardFooter>
-              <p><InputLabel style={{ color: "primary" }}>already have an account? sign-in</InputLabel></p>
-          </Card>
-        </GridItem>
-        <GridItem xs={12} sm={12} md={4}>
-          <Card profile>
-            <CardBody profile>
-                <p><a href="../signin">Sign in</a></p>
-                <p><a href="../signup">Sign up</a></p>
-            </CardBody>
-          </Card>
-        </GridItem>
-      </Grid>
-      qwerty
-    </div>
-  );
+            </Grid>
+        </div>
+    );
 }
 
 export default withStyles(styles)(Signup);
