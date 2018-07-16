@@ -18,6 +18,7 @@ import NotificationsPage from "views/Notifications/Notifications.jsx";
 import UpgradeToPro from "views/UpgradeToPro/UpgradeToPro.jsx";
 import Signup from "views/Signup/Signup.jsx";
 import Signin from "views/Signin/Signin.jsx";
+import EmailVerification from "views/EmailVerification/EmailVerification.jsx";
 
 const dashboardRoutes = [
     {
@@ -33,6 +34,13 @@ const dashboardRoutes = [
         navbarName: "Signup",
         icon: Person,
         component: Signup
+    },
+    {
+        path: "/emailverification",
+        sidebarName: "Email verification",
+        navbarName: "Email verification",
+        icon: Person,
+        component: EmailVerification
     },
   {
     path: "/dashboard",

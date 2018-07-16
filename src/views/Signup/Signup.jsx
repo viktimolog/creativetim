@@ -42,7 +42,7 @@ function Signup(props) {
           <Card>
             <CardHeader color="primary">
               <h4 className={classes.cardTitleWhite}>Register with Home Expense App</h4>
-              <p className={classes.cardCategoryWhite}>Please enter your email and password</p>
+              <p className={classes.cardCategoryWhite}>Please, enter your email and password</p>
             </CardHeader>
             <CardBody>
               <Grid container>

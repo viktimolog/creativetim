@@ -33,7 +33,7 @@ const styles = {
   }
 };
 
-function Signup(props) {
+function EmailVerification(props) {
   const { classes } = props;
     return (
         <div>
@@ -41,8 +41,8 @@ function Signup(props) {
                 <GridItem xs={12} sm={12} md={8}>
                     <Card>
                         <CardHeader color="primary">
-                            <h4 className={classes.cardTitleWhite}>Sign into Home Expense App</h4>
-                            <p className={classes.cardCategoryWhite}>Please, enter your email and password</p>
+                            <h4 className={classes.cardTitleWhite}>Email verification to finish registration with Home Expense App</h4>
+                            <p className={classes.cardCategoryWhite}>Please, confirm email address</p>
                         </CardHeader>
                         <CardBody>
                             <Grid container>
@@ -59,8 +59,8 @@ function Signup(props) {
                             <Grid container>
                                 <GridItem xs={12} sm={12} md={6}>
                                     <CustomInput
-                                        labelText="Password"
-                                        id="password"
+                                        labelText="VerificationCode"
+                                        id="verificationcode"
                                         formControlProps={{
                                             fullWidth: true
                                         }}
@@ -69,9 +69,9 @@ function Signup(props) {
                             </Grid>
                         </CardBody>
                         <CardFooter>
-                            <Button color="primary">SIGN IN</Button>
+                            <Button color="primary">VERIFY EMAIL</Button>
                         </CardFooter>
-                        <Link style={{marginLeft: '16px'}} to='/signup'>first time user? sign-up</Link>
+                        <Link style={{marginLeft: '16px'}} to='/signin'>already have an account? sign-in</Link>
                     </Card>
                 </GridItem>
             </Grid>
@@ -79,4 +79,4 @@ function Signup(props) {
     );
 }
 
-export default withStyles(styles)(Signup);
+export default withStyles(styles)(EmailVerification);
